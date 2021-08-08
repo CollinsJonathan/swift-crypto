@@ -39,8 +39,8 @@ let package = Package(
         .tvOS(.v13),
     ],
     products: [
-        .library(name: "Crypto", targets: ["Crypto"]),
-        .library(name: "_CryptoExtras", targets: ["_CryptoExtras"]),
+        .library(name: "Crypto", type: .dynamic, targets: ["Crypto"]),
+        .library(name: "_CryptoExtras", type: .dynamic, targets: ["_CryptoExtras"]),
         /* This target is used only for symbol mangling. It's added and removed automatically because it emits build warnings. MANGLE_START
             .library(name: "CCryptoBoringSSL", type: .static, targets: ["CCryptoBoringSSL"]),
             MANGLE_END */
